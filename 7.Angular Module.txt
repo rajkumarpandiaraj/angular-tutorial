@@ -1,0 +1,41 @@
+                                7.Angular module
+
+what is module?
+    Module contains n number of components, services, pips, directives
+    In Angular, a module is a mechanism to group components, directives, pipes and services that are related.
+    app.module.ts is the dfault module.
+
+////////////////////////////////////////////////////////////////////////
+
+To create new module :
+    --> ng g m <ModuleName>
+    This will create the users  module in the app folder
+
+    In users folder
+        ->user.module.ts
+    In user.module.ts
+        all the component should declared here.
+
+To create component in the users module :
+    --> ng g c users/login
+
+    now the login module got declared in the user,module.ts file
+    And we have to export the module to import and use it in the app.module.ts
+
+    In user.module.ts :
+        @NgModule({
+            declarations : [LoginComponents] // login component got declared here.
+        }),
+        imports : [],
+        exports : [
+            LoginComponents
+        ]
+
+export class userModule {}
+
+In app.module.ts
+    import {usersModule} './users/user.module'
+
+    imports : [
+        userModule // now we can acces to all the component in the userModule
+    ]

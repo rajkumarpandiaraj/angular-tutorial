@@ -1,0 +1,44 @@
+                    6.Angular component
+
+Mostly component have 4 files sometimes it may have two files.
+
+app is the default component created by the angular.
+ 
+ app.component.css      --> for style
+ app.component.html     --> for templateUrl
+ app.component.spec.ts  --> for unit testing/ test work
+ app.component.ts       --> for logic
+
+ This four files are connected in component.ts file at decorators
+
+ In app.component.ts
+ @component({ // this decorators defines the connection
+        selector : 'app-root',
+        templateUrl : './app.component.html',
+        styleurls : ['./app.component.css']
+    })
+
+selector --> name of the component, wherever you want to use this component, use this name.
+templateUrl --> this url defines the url for the html file for the component.
+styleurls --> defines the url for the css file for the component.
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+Creating new component:
+    To create new component
+        -> ng g c <componentName>
+        --> ng g c userList
+
+now user-list component got created.
+In user-list component
+    -> user-list.component.css
+    -> user-list.component.html
+    -> user-list.component.spec.ts
+    -> user-list.component.ts
+
+In user-list.component.ts
+    @component({ // this decorators defines the connection
+        selector : 'app-user-list',
+        templateUrl : './user-list.component.html',
+        styleurls : ['./user-list.component.css']
+    })

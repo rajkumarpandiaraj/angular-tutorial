@@ -1,0 +1,10 @@
+                        4.Making the first change
+
+In app/app.component.html
+    clear the html and write
+    <h1>Hello world</h1>
+
+//use ng serve in terminal.
+
+o/p : 
+    Hello world

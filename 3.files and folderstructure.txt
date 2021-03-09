@@ -1,0 +1,40 @@
+                    3.Files And Folder Structure
+
+What is a Package JSON file?
+     we can find it in the root folder. This he first file created for our proj.
+This file contains ProjName, dependecies, devdepedecies, scripts
+
+Src folder :
+    -> 95% of development work is done in the src folder.
+
+environment folder :
+    -> environment folder has two Files
+    -> it is used to define different configuration for different environment
+        like dev environment, test environment, production environment.
+    -> we will discuss deeply later.
+
+assets folder :
+    ->if we want to add font, extra css etc..
+
+index.html :
+    -> It is the first file running on the browser.
+    -> we never run code in index.html body.
+
+main.ts :
+    -> it is the bridge between angular code and index.html
+    -> it will load all the ts file in the index.html
+
+style.css :
+    -> here we can write some default/global styles
+
+app folder :
+    -> It is the very important folder.
+    -> app-routing.module.ts is the file inserted in the index.html file as <app-root></app-root>
+
+components :
+    -> components are the small functionality.
+
+modules :
+    -> modules are te collection of components.
+    eg : user is the module
+        userlogin, userSignup, userPassword are the components of this module.

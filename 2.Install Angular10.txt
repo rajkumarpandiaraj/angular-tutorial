@@ -1,0 +1,17 @@
+                    2.INstalling Angular 10
+
+1.Install node and npm
+
+2.Install command line interface // in the proj folder.
+    -->sudo npm install -g @angular/cli
+    To check :
+        ng version
+
+3.To create project
+    --> ng new <ProjName>
+        y
+        y
+
+4.TO start server
+    --> ng server
+     It runs the localhost in port 4200
