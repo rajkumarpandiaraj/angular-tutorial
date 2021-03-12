@@ -1,0 +1,45 @@
+            27.Call API | HTTP
+
+    --> What is API
+    --> How to make service
+    --> How to Fetch API Data in service
+    --> Import in component
+    --> Get data in component
+
+making service
+    ng g service users
+
+Two files got created.
+
+To get the data from the datbase we have to do two things 
+import HTTP in app.module.ts
+
+In app.module.ts
+    import { HttpClientModule } from '@angular/common/http'
+
+    imports : [
+        HttpClientModule
+    ]
+    
+In users.service.ts
+    import { HttpClientModule } from '@angular/common/http'
+
+    constructor(private http){}
+
+    getData(){
+        let url = 'URL';
+        return this.http.get(url);
+
+    }
+
+In app.component.ts
+    import {usersService} from ./users.service
+
+    constructor(private user : usersService){
+        this.user.getData().subscbe(data => {
+            console.log(data);
+        })
+    }
+
+    storage tha data inn tha variable and Display itin the html
+    

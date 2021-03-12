@@ -1,0 +1,78 @@
+                            12.Conditional statement
+
+Conditional statement
+    Make if Conditional
+    Make if..else Conditional
+    Make condition with string
+    Make elseif condition
+    Make condition with property binding
+
+In app.component.ts
+    show = true
+    showString = 'yes'
+    showColor = 'blue'
+
+if.. statement
+In app.component.html
+    <h1 *ngIf='show'> if block</h1>
+
+o/p
+    now if block is displayed in the browser becoz, show = true,
+    IF we change show = false, then nothing got displayed in the browser.
+
+//////////////////////////////////////////////////////
+
+if..else statement
+
+In app.component.html
+    <h1 *ngIf='show else elseBlock'> if block</h1>
+
+    <ng-template #elseBlock> //By default it does not displayed, ng template displayed basedn some condition
+        <h1>else block</h1>
+    </ng-template>
+
+o/p :
+    else block got displayed if the condition is false
+
+//we can also use ng-template for if block also
+In app.component.html
+    <h1 *ngIf='show : then ifBlock else elseBlock'></h1>
+
+    <ng-template #elseBlock> //By default it does not displayed, ng template displayed basedn some condition
+        <h1>else block</h1>
+    </ng-template>
+
+    <ng-template #ifBlock> //By default it does not displayed, ng template displayed basedn some condition
+        <h1>if block</h1>
+    </ng-template>
+
+//string condition
+In app.component.html
+    <h1 *ngIf='showString = 'yes' : then ifBlock else elseBlock'></h1>
+
+    <ng-template #elseBlock> //By default it does not displayed, ng template displayed basedn some condition
+        <h1>else block</h1>
+    </ng-template>
+
+    <ng-template #ifBlock> //By default it does not displayed, ng template displayed basedn some condition
+        <h1>if block</h1>
+    </ng-template>
+
+////////////////////////////////////////////////////////////////////
+
+else if statement with property binding
+
+<ng-template [*ngIf] = 'show == "red"'>
+    <h1>Red Blocl</h1>
+</ng-template>
+
+<ng-template [*ngIf] = 'show == "blue"'>
+    <h1>Blue Block</h1>
+</ng-template>
+
+<ng-template [*ngIf] = 'show == "green"'>
+    <h1>green block
+    </h1>
+</ng-template>
+
+based on the color ng template got displayed.

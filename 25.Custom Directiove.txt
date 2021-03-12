@@ -1,0 +1,48 @@
+                25.Custom directive
+
+What is directive
+    --> Example of default directive
+    --> How to make Custom directive
+    --> Run command ng g directive
+    --> use it with html //we can only use  the directive the html,not with the ts file
+
+What is directive?
+    it is used to modify the dom or html element
+    ex :
+        show/hide element
+        change style like that
+    ngFor, ngIf, ngSwitch are default directives
+
+creating Custom directive
+    --> ng g directive customStyle 
+    --> ng g directive <directiveName>
+
+Two file got created
+    1.custom-style-directive-specs.ts // used to write test for the directive
+    2.custom-style-directive.ts // it is used to write the logic for the directive
+
+In custom-style-directive.ts
+    @directive({
+        selector : '[appCustomStyle]' //This is the name of the directive
+    })
+
+In app.component.html
+    <h1>Normal Header</h1>
+    <h1 appCustomStyle>Costume Header</h1>
+
+In custom-style-directive.ts
+//import ElementRef
+import { Directive, ElementRef } from '@angular/core';
+
+    @directive({
+        selector : '[appCustomStyle]' //This is the name of the directive
+    })
+export class CustomStyleDirective{
+    constructor(private el:ElementRef){
+        el.nativeElement.style.color = 'red';
+    }
+}
+
+In browser,
+    now the custom Header got displayed in red color.
+    

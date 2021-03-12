@@ -1,0 +1,52 @@
+                            20.reuseable Component
+
+Reuseable component in angular
+        --> make user component
+        --> use it inside app component as child
+        --> pass data from parent to child
+        --> Use for loop and result child component
+
+make user component
+        ng g c user
+
+use it inside app component as child --- pass data from parent to child
+    In app.component.html
+    <div *ngFor = "let user of users">
+        <app-user [user] = 'user'></app-user>
+    </div>
+
+    In app.component.ts
+      users = [
+          {
+          name : 'rk',
+          age : 22,
+          address : 'TN'
+      },{
+          name : 'rk',
+          age : 22,
+          address : 'TN'
+      },{
+          name : 'rk',
+          age : 22,
+          address : 'TN'
+      },
+      ]
+
+Use for loop and result child component
+
+In user.component.ts
+    import {Component, OnInit:Input} from 'angular/cli';
+
+    @component({})
+    export class usersComponent implements OnInit(
+        @Input() user ;
+        constructor(){ }
+        ngOnInit(): void{
+            console.log(user) //we can use that here also
+        }
+    )
+ 
+ In user.component.html
+    <p>{{user.name}}</p>
+    <p>{{user.age}}</p>
+    <p>{{user.address}}</p>

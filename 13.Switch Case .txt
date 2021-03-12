@@ -1,0 +1,21 @@
+                        13.Switch Case
+
+SWicth Case :
+    make a property color
+    show data according to the color name
+    Switch Case
+
+In app.component.ts
+    color = 'blue'
+
+In app .component.html
+    <div [ngSwitch] = 'color' >
+        <h2 *ngSwitchCase = 'red'>Red color</h2>\
+        <h2 *ngSwitchCase = 'yellow'> yellowcolor</h2>
+        <h2 *ngSwitchCase = 'blue'>Blue color</h2>
+        <h2 *ngSwitchCase = 'green'>green color</h2>
+        <h2 *ngSwitchDefault>grey color</h2> // DEFAULT VALUE.
+    </div>
+
+    o/p
+    based on the color property h2 tag will get displayed.

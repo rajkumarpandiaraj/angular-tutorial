@@ -1,0 +1,41 @@
+                        24.Page not found Routing
+
+Page not found in angular
+    --> make a component
+    --> use it as 404 page with wildcard routing
+
+1.making component for 404
+    ng g c pageNotFounf
+
+page-not-component got created
+
+
+In app.routing.module.ts
+    import { AdminComponent } from  './admin/admin.component'
+    import { UserComponent } from  './user/user.component'
+    import { pageNotFound } from  './page-not-found/page-not-found.component'
+
+    const routes : Routes = [
+        {
+            pathe : 'user',
+            component : UserComponent
+        },
+        {
+            path : 'admin'
+            component : AdminComponent
+        },{
+            path : '**' // wildcard routing, no routes matches, it route got executes.
+            component : pageNotFound
+        }
+    ];
+    @ngModule{{ }}
+
+    export class AppRoutingModule()
+
+    In app.component.html
+        <h1>ROuting basics</h1>
+        <a routerLink = 'user'>user</a>
+        <a routerLink = 'admin'>admin</a>
+        <a routerLink='about'>about</a> // we dont have any specific routing for about.
+
+        <router-outlet></router-outlet>

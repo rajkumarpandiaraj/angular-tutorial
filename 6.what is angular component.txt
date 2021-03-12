@@ -5,7 +5,7 @@ Mostly component have 4 files sometimes it may have two files.
 app is the default component created by the angular.
  
  app.component.css      --> for style
- app.component.html     --> for templateUrl
+ app.component.html     --> for template
  app.component.spec.ts  --> for unit testing/ test work
  app.component.ts       --> for logic
 
@@ -42,3 +42,8 @@ In user-list.component.ts
         templateUrl : './user-list.component.html',
         styleurls : ['./user-list.component.css']
     })
+///////////////////////////////////////////////////////////////
+To render user-list component in the ui.import it in the app.component.html
+
+In app.component.html
+    <app-user-list></app-user-list>

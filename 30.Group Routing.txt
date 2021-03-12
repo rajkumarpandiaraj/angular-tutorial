@@ -1,0 +1,15 @@
+            30.Group Routing
+
+    --> Group Routing
+    --> Recap and continuation  of previous topic
+    --> make one more module and route for it
+    --> make grouped route
+
+    { /admin/login s
+        path :'admin', children ; [
+            {
+                path : 'login',
+                component : LoginComponents
+        ]
+    }
+    /admin/login --> like that

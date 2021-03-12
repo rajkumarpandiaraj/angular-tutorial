@@ -1,0 +1,31 @@
+                        9.Important event in Angular
+
+Import Events :
+    Click Event
+    Keyup Event
+    Keyup aith enter and space
+    keydown
+    blur
+    mouseOver and mouseleave
+    get values on textbox
+
+    In app.component.ts
+        export class AppComponents{
+            myEvent(evt){
+                console.log(evt)
+            }
+        }
+
+In app.component.html
+    <button (click)="myEvent('click event')">click</button>
+    <input type='text' (keyup)='myEvent("keyup event")'/>
+    <input type='text' (keydown)='myEvent("keydown event")'/>
+    <input type='text' (keyup.space)='myEvent("keyup space event")'/>
+    <input type='text' (keyup.eneter)='myEvent("keyup enter event")'/>
+    <input type='text' #box (keyup)='myEvent(box.value)'/> //#box is the id in angular
+    <input type='text' (blur)='myEvent("blur event")'/>
+    <button (mouseover)="myEvent('mouseover event')">click</button>
+    <button (mouseleave)="myEvent('mouseleave event')">click</button>
+
+
+

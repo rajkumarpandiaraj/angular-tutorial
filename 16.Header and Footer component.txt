@@ -1,0 +1,24 @@
+                        16.Header and footer component
+
+Make Header and footer in angular
+    --> create Header component
+    --> create Footer component
+    --> use Both component
+    --> Add styles
+
+--> create Header component
+    In terminal
+        ng g c Header
+
+--> create footer component
+    In terminal
+        ng g c footer
+
+copy the selector name in Header.component.ts and footer.component.ts
+
+And paste it in the app.component.html
+In app.component.html
+<app-Header></app-Header>
+<app-footer></app-footer>
+
+And add styles in the styles.css

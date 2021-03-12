@@ -1,0 +1,36 @@
+                            19.Pass Data from Parent to child component
+
+Pass  Data to child component
+        --> Make users component
+        --> make it child of app component
+        --> Pass Data from app to child component
+        --> Display data in chid component.
+
+1. Make users component
+    ng g c users
+
+using this component in app component
+    In app.component.html
+        <app-users [hero] = 'data'></app-users>
+
+In app.component.ts //parent component
+    data = 'bruce'; //it works well for obj and array also.
+
+here data in the parent component is shared it with the child component
+
+Now we have to recieve it in the users component
+
+In users.component.ts
+    import {Component, OnInit:Input} from 'angular/cli';
+
+    @component({})
+    export class usersComponent implements OnInit(
+        @Input() hero ;
+        constructor(){ }
+        ngOnInit(): void{
+            console.log(hero) //we can use that here also
+        }
+    )
+
+In users.component.html
+<h1>{{hero}}</h1>

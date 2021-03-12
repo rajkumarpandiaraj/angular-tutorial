@@ -1,0 +1,46 @@
+                    26.service
+
+    --> What is service in angular
+    --> How to make service using command
+    --> How to use service
+    --> Example
+
+What is service?
+    service is the data shared between to two are more component
+
+            Component
+                |   
+    service -----
+                |   
+            component
+
+How to make service
+    ng g service <serviceName>
+    ng g service users
+
+Now two file got created
+    1.users.service.ts
+    2.users.service.specs.ts
+
+In users.service.ts
+    constructor({})
+    getData(){
+        return{
+            name : 'rk',
+            age ; 22
+        }
+    }
+
+To use this in component, you have to register it
+In app.component.ts
+    import { userService } from ''./user.service
+
+    export class
+    name = ''
+    constructor(private user:userService){
+        this.name = this.user.getData().name
+        console.log(this.user.getData()) // {name : 'rk', }
+    }
+
+In app.component.html
+<h1>{{name}}</h1>

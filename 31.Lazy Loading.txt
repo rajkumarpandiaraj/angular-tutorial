@@ -1,0 +1,7 @@
+                31.Lazy loading
+--> Make a module
+--> Make two component
+--> use module in lazy oading way
+--> make routing
+--> make routing link
+

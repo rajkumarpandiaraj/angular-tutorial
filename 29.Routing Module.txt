@@ -1,0 +1,51 @@
+                29.Routing Module
+
+--> what is Routing Module
+--> Make module with routing file
+--> Define routing iniside module
+--> Make routing link
+--> Test
+
+What is Routing module
+    When we define the routing inside the specific module
+
+
+Creating Admin Module :
+    ng g m admin --routing
+
+Now Two files got created
+    1.admin-routing.module.ts
+    2.admin.module.ts
+
+creating two component in admin module
+    ng g c admin/login
+    ng g c admin/list
+
+creating the route for the login and list component :
+    In admin-routing.module.ts
+        import {ListComponent} from './list/list.component
+        import {Login} from './login/login.component
+
+        const routes : Routes = [
+            {
+                path : 'list',
+                component : ListComponent
+            },
+            {
+                path : 'login',
+                component : LoginComponents
+            }
+        ]
+
+importing the admin module in app module:
+    In app.module.ts
+        import  {adminModule } from './admin/admin.module'
+
+        imports : [
+            adminModule
+        ]
+In app.component.html
+        <a routerLink = 'list'>list</a>
+        <a routerLink = 'login'>login</a>
+        <router-outlet></router-outlet>
+

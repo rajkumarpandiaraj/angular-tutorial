@@ -1,0 +1,32 @@
+                17.style binding
+
+style binding in Angular :
+    --> differnce between normal style and style binding
+    --> Add Dynamic style
+    --> update style with button click
+    --> add conditional style
+
+1.differnce between normal style and style binding
+
+    --> style binding is belongs to angular 
+    --> normal binding is belongs to css
+
+    --> normal style is not much Dynamic
+    --> style binding is Dynamic
+
+    In app.component.ts
+        style2 = 'yellow';
+        err = true
+
+        updateColor(){
+            this.style2 = 'blue';
+        }
+
+    In app.component.html
+    <h1 style='color : "red'>normal style</h1>
+    <h1 [style.color] = "'red'">style binding1</h1>
+    <h1 [style.color = "style2"]>style binding 2</h1>
+
+    <button (click) = "updateColor()">updateColor</button>
+
+    <h1 [style.color] = 'err? "red" : "green"'>based on condition</h1>

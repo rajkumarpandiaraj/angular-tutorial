@@ -1,0 +1,26 @@
+                            10.Get TextBox value
+
+Get TextBox Value
+    get the value While typing(changing)
+    get the value with the button click.
+
+In app.component.ts
+    current val = ''
+    myEvent(val){
+        currentVal += val
+    }
+
+get the value While typing(changing)
+
+In app.component.html
+    <input type='text' (keyup)="myEvent($event.target.value)"/>
+    <h1>currentVal</h1>
+    
+ ////////////////////////////////////////////////////////////   
+get the value with the button click.
+In app.component.html
+    <input type='text' #box/>
+    <h1>currentVal</h1>
+    <button (click)="myEvent(box.value)>get Value</button>    
+
+

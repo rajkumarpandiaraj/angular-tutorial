@@ -1,0 +1,24 @@
+                                    11.Property Binding
+
+Property Binding :
+    Bind a property with html element.
+    Lets take 2 textbox
+    try to enable
+    Find differnce between property binding and Interpolation.
+
+In app.component.html
+    <input type='text' [disabled] = 'disableBox'/> //disableBox is the property in the ts file, tat property is binded here.
+    <input type='text' disabled = {{disableBox}}/> // Interpolation
+    // now both the box got disabled in the browser
+    <button (click)="enableBox()">enable TextBox</button>
+
+In app.component.ts
+disableBox = true
+    enableBox(){
+        this.disableBox = false
+    }
+
+
+o/p
+    if i click the button, first text box{property binded box} got enabled, becoz, property binding can handle the attribute.
+    

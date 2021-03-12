@@ -1,0 +1,41 @@
+                        21.Send data from chid to parent
+
+Send data child to parent component in angular
+    --> make a child component
+    --> Use it inisde app component as child
+    --> Pass data from child to parent with EventEmitter.
+
+Make a child component :
+    ng g c child
+
+Use it inisde app component as child
+
+In app.component.html
+    <app-child (parentFunc) = 'parentFunc($event)' ></app-child>
+    <h1>{{childData}}</h1>
+
+In app.component.ts
+    childData = ''
+    parentFunc(data){
+        childData = data
+        console.log(data);
+    }
+
+In child.component.ts
+    imprt  { Component,onInit, Output,EventEmitter } from '@angular/core';
+
+    @component({})
+    export class childComponent implements OnInit{
+        @Output() parentFunc : EventEmitter <any> = new EventEmitter()
+        constructor() { }
+        ngOnInit(): void{
+            this.parentFunc.emit('rk') // log rk on page load
+        }
+    sendData(){
+        this.parentFunc.emit('rk')
+    }
+
+    }
+
+In child.component.html
+    <button (click) = 'sendData()'>data to parent</button>

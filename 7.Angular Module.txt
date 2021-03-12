@@ -39,3 +39,6 @@ In app.module.ts
     imports : [
         userModule // now we can acces to all the component in the userModule
     ]
+
+In app.component.html :
+    <app-login></app-login>// login component in user module.

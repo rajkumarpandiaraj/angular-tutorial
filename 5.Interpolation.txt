@@ -1,0 +1,37 @@
+                        5.Interpolation {{}}
+
+What is Interpolation ?
+    sending the data from component.ts file to component.html file
+
+IN app.component.ts
+    import { Component } from '@angular/core'
+
+    @component({
+        selector : 'app-root',
+        templateUrl : './app.component.html',
+        styleurls : ['./app.component.ts']
+    })
+
+    export class AppComponents{
+        appName = 'blog app' // we don't want to define variable and func like var,const, function.
+        name = 'bruce'
+        getName(){
+            return 'this.name'
+        }
+
+        obj = {
+            name : 'rk',
+            age : 23
+        }
+        arr = ['ak', 'rk','sk']
+
+        siteUrl = window.location.href
+    }
+
+    In app.component.html
+    <h2>{{appName}}</h2> //blogapp
+    <h2>{{name}}</h2> // bruce
+    <h2>{{getName()}}</h2> // bruce
+    <h2>{{obj.name}}</h2> //rk
+    <h2>{{arr[0]}}</h2> // ak
+    <h2>{{siteUrl}}</h2> // url of the page

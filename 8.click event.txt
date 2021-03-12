@@ -1,0 +1,66 @@
+                            8.click event 
+
+To Do :
+    How to call a function in angular
+        1.Define a function
+        2.Make button amd call func on button click
+        3.pass params with function call.
+        4.pass property in function call.
+
+While Making a button and call a func on the button click,
+Both the button and the function got defined in the SAME Component
+ex :
+button should defined in app.component.html
+function should defined in the app.component.ts
+
+1.Defining a function
+In app.component.ts
+
+    @component({})
+    export class AppComponents{
+        title = 'blog' ;
+        getName (){
+            alert('Rk');
+        }
+    }
+
+2.Making a button
+In app.component.html
+    <button (click)='getName()'></button>
+
+now if we click the button, alert will get popup.
+/////////////////////////////////////////////////////////////////
+calling click fun with param/arg 
+
+
+In app.component.ts
+
+    @component({})
+    export class AppComponents{
+        title = 'blog' ;
+        getName (name){
+            alert(name);
+        }
+    }
+
+2.Making a button
+In app.component.html
+    <button (click)='getName("Rk")'></button>
+//////////////////////////////////////////////////////////////////
+
+calling the click function with property
+
+In app.component.ts
+
+    @component({})
+    export class AppComponents{
+        title = 'blog' ;
+        getName (name){
+            alert(name;
+        }
+    }
+
+2.Making a button
+In app.component.html
+    <button (click)='getName(title)'></button>
+

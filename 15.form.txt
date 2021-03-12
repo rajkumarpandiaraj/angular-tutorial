@@ -1,0 +1,27 @@
+                        15.Forms
+
+Make a simple form in angular
+    --> Import form module in module file
+    --> make a form
+    --> make  function and get form value.
+
+1.import form module in module files
+In app.module.ts
+    import {FormModule } from '@angular/form' 
+    imports = [
+        FormModule
+    ]
+
+2.make a form
+In app.component.html
+    <form #simpleForm = 'ngForm' (ngSubmit) = 'getValue(#simpleForm.value)'>
+        <inputtype='text' ngModel name='user' placeholder='Enter Name' />
+        <inputtype='number' ngModel name='age' placeholder='Enter age' />
+        <inputtype='text' ngModel name='address' placeholder='Anter address' />
+        <button>Get User Values</button>
+    </form>
+//ngModel will add that input field to the form
+In app.component.ts
+    getValue(val){
+        console.log(val) // obj
+    }

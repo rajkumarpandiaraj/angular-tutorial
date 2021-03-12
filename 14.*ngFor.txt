@@ -1,0 +1,39 @@
+                            14.For Loop in Angular
+
+For loop in angular
+    1. make an array
+    2.apply for loop with it
+    3.make an obj
+    4.apply for loop with it
+
+In app.component.ts
+    arr = ['rk','sk', 'ak'] 
+
+    obj = [
+        {
+            name : 'rk'
+            age : 22
+        },
+        {
+            name : 'sk'
+            age : 20
+        },
+        {
+            name : 'ak'
+            age : 18
+        },
+    ]
+
+    In app.component.html
+    <h1 *ngFor = "let item of arr">{{item}}</h1>
+    <h1 *ngFor="let item of obj>{{item.name}} {{item.age}}</h1>
+    <table>
+        <th>
+            <td>name</td>
+            <td>age</td>
+        </th>
+        <tr *ngFor="let item of obj">
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+        </tr>
+    </table>

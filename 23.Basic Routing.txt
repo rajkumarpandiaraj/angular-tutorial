@@ -1,0 +1,61 @@
+                            23.Basic routing
+
+Basic routing
+    --> make 2 component
+    --> Add routing in app-routing-module file
+    --> Write code in Html file for making ROuting link
+    --> Test routing
+
+If you didi not select routing option on the project make time 
+ng generate module app-routing --flat --module-app
+
+1.Making 2 component
+    --> ng g c user
+    --> ng g c admin
+
+user and admin component are created
+
+In app.routing.module.ts
+    import { AdminComponent } from  './admin/admin.component'
+    import { UserComponent } from  './user/user.component'
+
+    const routes : Routes = [
+        {
+            pathe : 'user',
+            component : UserComponent
+        },
+        {
+            path : 'admin'
+            component : AdminComponent
+        }
+    ];
+    @ngModule{{ }}
+
+    export class AppRoutingModule()
+
+    In app.component.html
+        <h1>ROuting basics</h1>
+        <a routerLink = 'user'>user</a>
+        <a routerLink = 'admin'>admin</a>
+
+        <router-outlet></router-outlet>
+    
+o/p:
+On page load
+    ROuting basics
+    user
+    admin
+
+If i click on user
+    ROuting basics
+    user
+    admin
+
+    user works
+
+If i click on admin
+    ROuting basics
+    user
+    admin
+
+    admin works

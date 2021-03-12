@@ -1,0 +1,20 @@
+                    18.Add bootstrap in angular
+
+Add bootstrap in angular 10
+        --> Run command for install bootstrap
+        --> Try with some bootstrap examples
+        --> We check and use code from official website of ng-bootstrap
+
+1.Run command for install bootstrap
+        -> ng add @ng-bootstrap/ng-bootstrap
+
+    This will make the changes in five of our proj files.
+        1.angular.json
+        2.Package.json
+        3.Package.lock.json
+        4.app.module.ts --> imports ngbModule
+
+Try with some bootstrap examples
+    ng bootstrap website
+
+   

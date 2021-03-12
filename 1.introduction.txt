@@ -1,0 +1,15 @@
+                                1.Introduction
+
+Intro :
+
+--> Angular is developed by the google.
+--> first Release - 14 september 2016
+--> current Release - 10.0.0
+
+--> Angular (Angular 2 +) open souce web app framework led by the Angular Team at google.
+
+--> Angular is total different from Angular.js
+
+--> Angular has MVC ased architecture for app development.
+
+-->  We can use it with NPM and without npm(cnd etc) but 90% developer use NPM with it.

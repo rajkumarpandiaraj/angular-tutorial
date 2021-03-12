@@ -1,0 +1,8 @@
+                    28.Model and interface
+
+what is Model
+    --> How to make it
+    --> how to use it
+    --> With model with other file
+    --> use model with component file
+    --> use model with service file

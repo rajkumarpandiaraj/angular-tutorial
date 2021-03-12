@@ -1,0 +1,25 @@
+                    22.Pipes
+What is Pipe
+    Pipe with string
+    Pipe with date
+    Pipe with slice
+    Pipe with currency
+    etc
+    Example 
+
+what is Pipe ?
+    Pipe used to change the format
+
+In app.component.ts
+    name = 'peter parKer';
+    today = Date.now();
+    str = 'Hello world' ;
+    money = 100
+
+In app.component.html
+    <h1>{{name | upperCase}}</h1>
+    <h1>{{name | lowerCase}}}</h1>
+     <h1>{{tody | date}}</h1>
+    <h1>{{today | date : 'fullDate'}}</h1>
+    <h1>{{str | slice : 2:6}}</h1>
+    <h1>{{money | currency:'USD'}}</h1>
